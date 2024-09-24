@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado GS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="buttons">
+                <button id="loginButton" class="login-button">Login</button> 
+                <button id="chatButton" class="chat-button">Chat</button> <!-- Botão de chat -->
+                <button class="cart-button"><img src="carrinho.png" alt="Carrinho de compras"></button>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="O que está procurando? Digite aqui..." />
+                <button class="search-button"><img src="lupa.png" alt="Buscar"></button>
+            </div>
+            <div class="logo">
+                <img src="logo.png" alt="Logo da Marca">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="slideshow">
+            <img src="slide1.jpg" alt="Slide 1">
+            <img src="slide2.jpg" alt="Slide 2">
+            <img src="slide3.png" alt="Slide 3">
+            <img src="slide4.jpg" alt="Slide 4">
+            <div class="prev">&#9664;</div>
+            <div class="next">&#9654;</div>
+        </div>
+        <div class="products-grid">
+            <div class="product">
+                <img src="tv.png" alt="Smart TV 32’’ LG">
+                <div class="description">
+                    <p>Smart TV 32’’ LG por apenas R$ 1599,00</p>
+                </div>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="camisa.png" alt="Camisa Polo Masculina">
+                <div class="description">
+                    <p>Camisa Polo Masculina por apenas R$ 49,99</p>
+                </div>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="bicicleta.png" alt="Bicicleta Aro 29 Ravok">
+                <div class="description">
+                    <p>Bicicleta Aro 29 Ravok 21v Aço Carbono Freios a Disco, por apenas R$ 799,00</p>
+                </div>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="computador.png" alt="Computador i5, 16 G RAM">
+                <div class="description">
+                    <p>Computador i5, 16 G RAM, completo por apenas R$ 2.399,99</p>
+                </div>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="mesa.png" alt="Mesa de Computador Byte">
+                <div class="description">
+                    <p>Mesa de Computador Byte Escrivaninha 2 Gavetas Valdemóveis R$ 299,99</p>
+                </div>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="geladeira.png" alt="Geladeira Brastemp">
+                <div class="description">
+                    <p>Geladeira Brastemp Frost Free Duplex 375 litros com Compartimento R$ 2499,00</p>
+                </div>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="ratoeira.png" alt="Ratoeira Gaiola de Arame">
+                <div class="description">
+                    <p>Ratoeira Gaiola de Arame N2 Eldorado R$ 29,99</p>
+                </div>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="calça.png" alt="Calça Jeans Feminina">
+                <div class="description">
+                    <p>Calça Jeans Feminina com Brilho Premium R$ 69,00</p>
+                </div>
+                <button>Comprar</button>
+            </div>
+        </div>
+        <div class="pagination">
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+        </div>
+    </main>
+
+    <script>
+        // Redirecionamento para a página de chat
+        document.getElementById('chatButton').addEventListener('click', function() {
+            window.location.href = 'chat.html'; // Nome da página de chat
+        });
+    
+        // Redirecionamento para a página de login
+        document.getElementById('loginButton').addEventListener('click', function() {
+            window.location.href = 'login.html'; // Nome da página de login
+        });
+    
+        // Lógica do slideshow
+        const slides = document.querySelectorAll('.slideshow img');
+        let currentSlide = 0;
+    
+        // Função para mostrar o slide atual e esconder os outros
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+    
+        // Mostrar o primeiro slide inicialmente
+        showSlide(currentSlide);
+    
+        // Navegar para o slide anterior
+        document.querySelector('.prev').addEventListener('click', function() {
+            currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
+            showSlide(currentSlide);
+        });
+    
+        // Navegar para o próximo slide
+        document.querySelector('.next').addEventListener('click', function() {
+            currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
+            showSlide(currentSlide);
+        });
+    </script>
+    
+</body>
+</html>
