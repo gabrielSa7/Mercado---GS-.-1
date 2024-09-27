@@ -12,6 +12,7 @@
             <div class="buttons">
                 <button id="loginButton" class="login-button">Login</button> 
                 <button id="chatButton" class="chat-button">Chat</button> <!-- Botão de chat -->
+                <button id="sobreButton" class="sobre-button">Sobre</button> <!-- Botão Sobre -->
                 <button class="cart-button"><img src="carrinho.png" alt="Carrinho de compras"></button>
             </div>
             <div class="search-bar">
@@ -62,34 +63,6 @@
                 </div>
                 <button>Comprar</button>
             </div>
-            <div class="product">
-                <img src="mesa.png" alt="Mesa de Computador Byte">
-                <div class="description">
-                    <p>Mesa de Computador Byte Escrivaninha 2 Gavetas Valdemóveis R$ 299,99</p>
-                </div>
-                <button>Comprar</button>
-            </div>
-            <div class="product">
-                <img src="geladeira.png" alt="Geladeira Brastemp">
-                <div class="description">
-                    <p>Geladeira Brastemp Frost Free Duplex 375 litros com Compartimento R$ 2499,00</p>
-                </div>
-                <button>Comprar</button>
-            </div>
-            <div class="product">
-                <img src="ratoeira.png" alt="Ratoeira Gaiola de Arame">
-                <div class="description">
-                    <p>Ratoeira Gaiola de Arame N2 Eldorado R$ 29,99</p>
-                </div>
-                <button>Comprar</button>
-            </div>
-            <div class="product">
-                <img src="calça.png" alt="Calça Jeans Feminina">
-                <div class="description">
-                    <p>Calça Jeans Feminina com Brilho Premium R$ 69,00</p>
-                </div>
-                <button>Comprar</button>
-            </div>
         </div>
         <div class="pagination">
             <button class="active">1</button>
@@ -122,7 +95,12 @@
         document.getElementById('loginButton').addEventListener('click', function() {
             window.location.href = 'login.html'; // Nome da página de login
         });
-    
+
+        // Redirecionamento para a página sobre
+        document.getElementById('sobreButton').addEventListener('click', function() {
+            window.location.href = 'sobre.html'; // Nome da página de sobre
+        });
+
         // Lógica do slideshow
         const slides = document.querySelectorAll('.slideshow img');
         let currentSlide = 0;

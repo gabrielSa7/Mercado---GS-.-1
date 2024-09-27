@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Mercado GS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="buttons">
+                <button id="loginButton" class="login-button">Login</button> 
+                <button id="chatButton" class="chat-button">Chat</button> <!-- Botão de chat -->
+                <button class="cart-button"><img src="carrinho.png" alt="Carrinho de compras"></button>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="O que está procurando? Digite aqui..." />
+                <button class="search-button"><img src="lupa.png" alt="Buscar"></button>
+            </div>
+            <div class="logo">
+                <img src="logo.png" alt="Logo da Marca">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h1>Sobre Nós</h1>
+            <p>O <strong>Mercado GS</strong> é uma loja online dedicada a fornecer produtos de qualidade com um atendimento excepcional. Fundada em 2024, temos o compromisso de oferecer uma vasta gama de produtos, desde eletrônicos até roupas e acessórios, tudo a preços acessíveis.</p>
+
+            <h2>Nosso Compromisso</h2>
+            <p>Nosso objetivo é simplificar a experiência de compra online, proporcionando aos nossos clientes produtos de alta qualidade e um processo de compra seguro e confiável. Trabalhamos constantemente para melhorar nossa plataforma, tornando-a mais fácil de usar, acessível e eficiente.</p>
+
+            <h2>Visão</h2>
+            <p>Ser a principal escolha dos consumidores para compras online no Brasil, destacando-se pela qualidade dos produtos, eficiência nos serviços e inovação constante.</p>
+
+            <h2>Missão</h2>
+            <p>Proporcionar uma experiência de compra online incrível, com um catálogo diversificado de produtos, atendimento de excelência e entrega rápida em todo o Brasil.</p>
+
+            <h2>Valores</h2>
+            <ul>
+                <li><strong>Qualidade:</strong> Oferecemos produtos de confiança e excelência.</li>
+                <li><strong>Inovação:</strong> Estamos sempre aprimorando nossa plataforma para proporcionar a melhor experiência ao cliente.</li>
+                <li><strong>Transparência:</strong> Manter a comunicação clara e honesta com nossos clientes é essencial para nós.</li>
+                <li><strong>Sustentabilidade:</strong> Buscamos formas de reduzir o impacto ambiental em nossas operações.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Mercado GS. Todos os direitos reservados.</p>
+            <p>Contato: contato@mercadogs.com.br | Telefone: (11) 1234-5678</p>
+            <p>Redes Sociais: 
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a> | 
+                <a href="#">Twitter</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Redirecionamento para a página de chat
+        document.getElementById('chatButton').addEventListener('click', function() {
+            window.location.href = 'chat.html'; // Nome da página de chat
+        });
+    
+        // Redirecionamento para a página de login
+        document.getElementById('loginButton').addEventListener('click', function() {
+            window.location.href = 'login.html'; // Nome da página de login
+        });
+    </script>
+    
+</body>
+</html>
